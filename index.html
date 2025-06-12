@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Criztal ResinArt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Arte em Resina que Guarda Histórias</h1>
+      <p>Peças únicas feitas à mão em Portugal. Personalizadas para eternizar momentitos, sentimentos e memórias.</p>
+      <a href="#coleccao" class="btn">Ver Colecção Exclusiva</a>
+    </div>
+    <div class="hero-image">
+      <img src="img/coracao-resina.jpg" alt="Peça artesanal em resina" />
+    </div>
+  </header>
+
+  <section class="destaques" id="coleccao">
+    <h2>Destaques da Semana</h2>
+    <div class="produtos">
+      <div class="produto">
+        <img src="img/azulejo.jpg" alt="Azulejo Oceano">
+        <p><strong>Mais Vendido</strong><br>Azulejo Oceano<br>20,00 €</p>
+      </div>
+      <div class="produto">
+        <img src="img/chaveiro-m.jpg" alt="Letra Floral">
+        <p><strong>Feito com Flor Real</strong><br>Letra Floral<br>15,00 €</p>
+      </div>
+      <div class="produto">
+        <img src="img/prato-lua.jpg" alt="Prato de Lua">
+        <p><strong>Sugestão para Oferta</strong><br>Prato de Lua<br>18,00 €</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <h2>Portfólio Artístico</h2>
+    <div class="galeria">
+      <img src="img/galeria1.jpg" alt="Flor em Resina" />
+      <img src="img/galeria2.jpg" alt="Paisagem em resina" />
+      <img src="img/galeria3.jpg" alt="Coração floral" />
+      <img src="img/galeria4.jpg" alt="Borboleta decorativa" />
+    </div>
+  </section>
+
+  <section class="testemunho">
+    <blockquote>
+      “A peça chegou e chorei. É como ter o meu pai sempre comigo.”  
+      <cite>– Marta R., Leiria</cite>
+    </blockquote>
+  </section>
+
+  <section class="personalizar">
+    <h2>Chaveiro Borboleta</h2>
+    <p>12,00 €</p>
+    <a href="#" class="btn">Personalizar esta peça</a>
+  </section>
+
+  <footer>
+    <div class="rodape">
+      <p>Criztal ResinArt – Orgulhosamente feito à mão em Portugal 🇵🇹</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+🎨 styles.css
+css
+Copiar
+Editar
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #3e2f1c;
+  background-color: #fffdf9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background: linear-gradient(to right, #ffaf75, #ff8035);
+  color: white;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-image img {
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.btn {
+  display: inline-block;
+  background-color: #c7511f;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #a23910;
+}
+
+section {
+  padding: 2rem;
+}
+
+.destaques .produtos {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.produto p {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.portfolio .galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.portfolio img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.testemunho blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 600px;
+}
+
+.testemunho cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.personalizar {
+  text-align: center;
+  background-color: #fff2e6;
+  padding: 2rem;
+}
+
+footer {
+  background-color: #3e2f1c;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
