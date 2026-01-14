@@ -1,100 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Criztal ResinArt | Arte em Resina Única em Portugal</title>
-  <meta name="description" content="Peças artesanais em resina feitas à mão — chaveiros, azulejos, marcadores e decorações únicas.">
-
-  <!-- SEO e Social -->
-  <meta property="og:title" content="Criztal ResinArt">
-  <meta property="og:description" content="Arte em resina que guarda histórias, feita em Portugal.">
-  <meta property="og:type" content="website">
-
+  <title>Cryztal Store</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- NAV -->
-  <nav class="navbar">
-    <a href="#hero">Home</a>
-    <a href="#produtos">Produtos</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#contato">Contato</a>
+<header>
+  <div class="logo">Cryztal Store</div>
+  <nav>
+    <a href="#products">Produtos</a>
+    <a href="#about">Sobre</a>
+    <a href="#contact">Contacto</a>
+    <button id="cart-btn">🛒 <span id="cart-count">0</span></button>
   </nav>
+</header>
 
-  <!-- HERO -->
-  <header id="hero" class="hero">
-    <div class="hero-content">
-      <h1>Criztal ResinArt</h1>
-      <p>Arte em resina que guarda histórias</p>
-      <a class="btn primary" href="#produtos">Ver Coleção</a>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Arte em Cristal Artesanal</h1>
+    <p>Peças únicas feitas à mão com paixão e detalhe.</p>
+    <a href="#products" class="btn">Ver Coleção</a>
+  </div>
+</section>
+
+<section id="products" class="products">
+  <h2>Coleção</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="assets/product1.jpg" alt="">
+      <h3>Cristal Aurora</h3>
+      <p>45€</p>
+      <button onclick="addToCart('Cristal Aurora',45)">Adicionar</button>
     </div>
-  </header>
 
-  <!-- PRODUTOS -->
-  <section id="produtos" class="section produtos">
-    <h2>Nossos Destaques</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="images/chaveiro-borboleta.jpg" alt="Chaveiro Borboleta em Resina">
-        <h3>Chaveiro Borboleta</h3>
-        <p>Peça com flores reais moldadas à mão.</p>
-        <span class="price">12,00 €</span>
-      </div>
-
-      <div class="card">
-        <img src="images/azulejo-oceano.jpg" alt="Azulejo Oceano em Resina">
-        <h3>Azulejo Oceano</h3>
-        <p>Inspirado na costa portuguesa.</p>
-        <span class="price">20,00 €</span>
-      </div>
-
-      <div class="card">
-        <img src="images/letra-floral.jpg" alt="Letra Floral em Resina">
-        <h3>Letra Floral</h3>
-        <p>Personalize com flores naturais.</p>
-        <span class="price">15,00 €</span>
-      </div>
-
-      <div class="card">
-        <img src="images/prato-lua.jpg" alt="Prato de Lua em Resina">
-        <h3>Prato de Lua</h3>
-        <p>Peça artística inspirada no céu noturno.</p>
-        <span class="price">18,00 €</span>
-      </div>
+    <div class="product-card">
+      <img src="assets/product2.jpg" alt="">
+      <h3>Cristal Terra</h3>
+      <p>55€</p>
+      <button onclick="addToCart('Cristal Terra',55)">Adicionar</button>
     </div>
-  </section>
 
-  <!-- GALERIA -->
-  <section id="galeria" class="section galeria">
-    <h2>Galeria</h2>
-    <div class="gallery-grid">
-      <img src="images/resina1.jpg" alt="Arte em resina 1">
-      <img src="images/resina2.jpg" alt="Arte em resina 2">
-      <img src="images/resina3.jpg" alt="Arte em resina 3">
-      <img src="images/resina4.jpg" alt="Arte em resina 4">
+    <div class="product-card">
+      <img src="assets/product3.jpg" alt="">
+      <h3>Cristal Fogo</h3>
+      <p>65€</p>
+      <button onclick="addToCart('Cristal Fogo',65)">Adicionar</button>
     </div>
-  </section>
 
-  <!-- CONTATO -->
-  <section id="contato" class="section contact">
-    <h2>Contacte-nos</h2>
-    <form id="contact-form">
-      <input type="text" name="nome" placeholder="Seu Nome" required>
-      <input type="email" name="email" placeholder="Seu Email" required>
-      <textarea name="mensagem" placeholder="Sua mensagem..." required></textarea>
-      <button type="submit" class="btn primary">Enviar</button>
-    </form>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 Criztal ResinArt</p>
-    <p>Siga nas redes:</p>
-    <a href="https://instagram.com/cryztalstore" target="_blank">Instagram</a>
-  </footer>
+<section id="about" class="about">
+  <h2>Sobre a Cryztal</h2>
+  <p>
+    Cada peça Cryztal nasce do equilíbrio entre arte, natureza e tradição.
+    Trabalhamos com materiais selecionados e processos artesanais.
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contacto</h2>
+  <form>
+    <input type="text" placeholder="Nome">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Mensagem"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Cryztal Store — Todos os direitos reservados</p>
+</footer>
+
+<!-- CART MODAL -->
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-content">
+    <h3>Carrinho</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total"></p>
+    <button class="checkout">Checkout (Stripe/PayPal)</button>
+    <button onclick="closeCart()">Fechar</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
