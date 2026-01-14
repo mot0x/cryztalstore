@@ -2,8 +2,9 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
+  <title>Criztal Resin Art</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cryztal Store</title>
+  <meta name="description" content="Arte em resina artesanal. Peças únicas feitas à mão.">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -11,84 +12,72 @@
 <body>
 
 <header>
-  <div class="logo">Cryztal Store</div>
+  <div class="logo">Criztal Resin Art</div>
   <nav>
-    <a href="#products">Produtos</a>
     <a href="#about">Sobre</a>
+    <a href="#shop">Loja</a>
     <a href="#contact">Contacto</a>
-    <button id="cart-btn">🛒 <span id="cart-count">0</span></button>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-text">
-    <h1>Arte em Cristal Artesanal</h1>
-    <p>Peças únicas feitas à mão com paixão e detalhe.</p>
-    <a href="#products" class="btn">Ver Coleção</a>
-  </div>
-</section>
-
-<section id="products" class="products">
-  <h2>Coleção</h2>
-
-  <div class="product-grid">
-
-    <div class="product-card">
-      <img src="assets/product1.svg" alt="">
-      <h3>Cristal Aurora</h3>
-      <p>45€</p>
-      <button onclick="addToCart('Cristal Aurora',45)">Adicionar</button>
-    </div>
-
-    <div class="product-card">
-      <img src="assets/product2.jpg" alt="">
-      <h3>Cristal Terra</h3>
-      <p>55€</p>
-      <button onclick="addToCart('Cristal Terra',55)">Adicionar</button>
-    </div>
-
-    <div class="product-card">
-      <img src="assets/product3.svg" alt="">
-      <h3>Cristal Fogo</h3>
-      <p>65€</p>
-      <button onclick="addToCart('Cristal Fogo',65)">Adicionar</button>
-    </div>
-
+    <h1>Arte em Resina</h1>
+    <p>Peças únicas criadas à mão com detalhe e paixão.</p>
   </div>
 </section>
 
 <section id="about" class="about">
-  <h2>Sobre a Cryztal</h2>
-  <p>
-    Cada peça Cryztal nasce do equilíbrio entre arte, natureza e tradição.
-    Trabalhamos com materiais selecionados e processos artesanais.
-  </p>
+  <img src="assets/about.jpg">
+  <div>
+    <h2>Sobre a Artista</h2>
+    <p>
+      Cada criação nasce da inspiração natural, do detalhe e do processo artesanal.
+      Não existem duas peças iguais — cada obra conta uma história.
+    </p>
+  </div>
+</section>
+
+<section id="shop" class="shop">
+  <h2>Loja</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="assets/p1.jpg">
+      <h3>Porta-copos Oceano</h3>
+      <span>25€</span>
+      <button>Adicionar</button>
+    </div>
+
+    <div class="card">
+      <img src="assets/p2.jpg">
+      <h3>Tabuleiro Áurea</h3>
+      <span>45€</span>
+      <button>Adicionar</button>
+    </div>
+
+    <div class="card">
+      <img src="assets/p3.jpg">
+      <h3>Chaveiro Cristal</h3>
+      <span>12€</span>
+      <button>Adicionar</button>
+    </div>
+
+  </div>
 </section>
 
 <section id="contact" class="contact">
   <h2>Contacto</h2>
-  <form>
-    <input type="text" placeholder="Nome">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Mensagem"></textarea>
-    <button type="submit">Enviar</button>
-  </form>
+  <p>Encomendas personalizadas via Instagram ou email</p>
+  <a href="https://www.instagram.com/criztal.resinart/" target="_blank" class="btn">
+    Instagram
+  </a>
 </section>
 
 <footer>
-  <p>© 2026 Cryztal Store — Todos os direitos reservados</p>
+  © 2026 Criztal Resin Art
 </footer>
-
-<!-- CART MODAL -->
-<div id="cart-modal" class="cart-modal">
-  <div class="cart-content">
-    <h3>Carrinho</h3>
-    <ul id="cart-items"></ul>
-    <p id="cart-total"></p>
-    <button class="checkout">Checkout (Stripe/PayPal)</button>
-    <button onclick="closeCart()">Fechar</button>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>
