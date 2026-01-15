@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Criztal Resin Art</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<header class="top">
   <h1>Criztal Resin Art</h1>
   <nav>
     <a href="#about">Sobre</a>
@@ -18,41 +18,49 @@
   </nav>
 </header>
 
-<section class="hero"></section>
-
-<section id="about">
-  <h2>Sobre a Artista</h2>
-  <p>Peças únicas criadas à mão com detalhe e paixão.</p>
+<section class="hero">
+  <div class="hero-text">
+    <h2>Arte em Resina</h2>
+    <p>Peças únicas criadas à mão com detalhe e paixão</p>
+  </div>
 </section>
 
-<section id="shop">
-  <h2>Loja</h2>
-  <div class="grid">
+<section id="about" class="section">
+  <h2>Sobre a Artista</h2>
+  <p>
+    Cada criação nasce da inspiração natural, do detalhe e do processo artesanal.
+    Não existem duas peças iguais — cada obra conta uma história.
+  </p>
+</section>
 
+<section id="shop" class="section">
+  <h2>Loja</h2>
+
+  <div class="grid">
     <div class="card">
-      <img src="assets/p1.svg">
+      <img src="assets/p1.svg" alt="Porta-copos Oceano">
       <h3>Porta-copos Oceano</h3>
       <span>25€</span>
     </div>
 
     <div class="card">
-      <img src="assets/p2.svg">
+      <img src="assets/p2.svg" alt="Tabuleiro Áurea">
       <h3>Tabuleiro Áurea</h3>
       <span>45€</span>
     </div>
 
     <div class="card">
-      <img src="assets/p3.svg">
+      <img src="assets/p3.svg" alt="Chaveiro Cristal">
       <h3>Chaveiro Cristal</h3>
       <span>12€</span>
     </div>
-
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="section contact">
   <h2>Contacto</h2>
-  <a href="https://www.instagram.com/criztal.resinart/" target="_blank">
+  <p>Encomendas personalizadas via Instagram</p>
+  <a class="btn" href="https://www.instagram.com/criztal.resinart/" target="_blank">
     Instagram
   </a>
 </section>
