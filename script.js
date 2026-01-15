@@ -1,37 +1,28 @@
-// ANIMAÇÕES
-const elements = document.querySelectorAll(".fade-up");
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-elements.forEach(el => observer.observe(el));
-
-// CARRINHO
-let cart = [];
+updateCart();
 
 function addToCart(name, price) {
   cart.push({ name, price });
+  localStorage.setItem("cart", JSON.stringify(cart));
   updateCart();
 }
 
 function updateCart() {
-  const cartItems = document.getElementById("cart-items");
-  const cartTotal = document.getElementById("cart-total");
+  const list = document.getElementById("cart-items");
+  const totalEl = document.getElementById("cart-total");
+  const countEl = document.getElementById("cart-count");
 
-  cartItems.innerHTML = "";
+  list.innerHTML = "";
   let total = 0;
 
   cart.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = `${item.name} — ${item.price}€`;
-    cartItems.appendChild(li);
+    li.textContent = `${item.name} – ${item.price}€`;
+    list.appendChild(li);
     total += item.price;
   });
 
-  cartTotal.textContent = total + "€";
+  totalEl.textContent = total + "€";
+  countEl.textContent = cart.length;
 }
