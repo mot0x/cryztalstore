@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Criztal Resin Art</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,78 +14,75 @@
   <nav>
     <a href="#sobre">Sobre</a>
     <a href="#loja">Loja</a>
-    <a href="#cart">Carrinho</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#instagram">Instagram</a>
+    <a href="#cart">Carrinho (<span id="cart-count">0</span>)</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero-image"></section>
-
-<section class="hero-content fade-up">
-  <h2>Arte em Resina</h2>
-  <img src="assets/hero.jpg" alt="Arte em Resina">
-  <p>Peças únicas criadas à mão com detalhe, paixão e inspiração natural.</p>
+<section class="hero">
+  <div class="hero-overlay">
+    <h2>Arte em Resina Premium</h2>
+    <p>Peças únicas criadas à mão com elegância e detalhe</p>
+  </div>
 </section>
 
 <!-- SOBRE -->
-<section class="about fade-up" id="sobre">
-  <h2>Sobre a Artista</h2>
+<section id="sobre" class="section">
+  <h3>Sobre a Artista</h3>
   <p>
-    Cada criação nasce da inspiração natural, do detalhe e do processo artesanal.
-    Não existem duas peças iguais — cada obra conta uma história.
+    Cada peça Criztal Resin Art é criada manualmente, combinando resina,
+    pigmentos e inspiração natural para criar objetos únicos e intemporais.
   </p>
 </section>
 
 <!-- LOJA -->
-<section class="shop fade-up" id="loja">
-  <h2>Loja</h2>
+<section id="loja" class="section">
+  <h3>Loja</h3>
 
   <div class="products">
     <div class="product">
       <img src="assets/p1.jpg" alt="Porta-copos Oceano">
-      <h3>Porta-copos Oceano</h3>
-      <p class="price">25€</p>
-      <button onclick="addToCart('Porta-copos Oceano', 25)">Adicionar</button>
+      <h4>Porta-copos Oceano</h4>
+      <span>18€</span>
+      <button onclick="addToCart('Porta-copos Oceano', 18)">Adicionar</button>
     </div>
 
     <div class="product">
-      <img src="assets/p2.jpg" alt="Tabuleiro Áurea">
-      <h3>Tabuleiro Áurea</h3>
-      <p class="price">45€</p>
-      <button onclick="addToCart('Tabuleiro Áurea', 45)">Adicionar</button>
+      <img src="assets/p2.jpg" alt="Tabuleiro Cristal">
+      <h4>Tabuleiro Cristal</h4>
+      <span>35€</span>
+      <button onclick="addToCart('Tabuleiro Cristal', 35)">Adicionar</button>
     </div>
 
     <div class="product">
-      <img src="assets/p3.jpg" alt="Chaveiro Cristal">
-      <h3>Chaveiro Cristal</h3>
-      <p class="price">12€</p>
-      <button onclick="addToCart('Chaveiro Cristal', 12)">Adicionar</button>
+      <img src="assets/p3.jpg" alt="Peça Abstrata">
+      <h4>Peça Abstrata</h4>
+      <span>42€</span>
+      <button onclick="addToCart('Peça Abstrata', 42)">Adicionar</button>
     </div>
   </div>
 </section>
 
+<!-- INSTAGRAM -->
+<section id="instagram" class="section">
+  <h3>Instagram</h3>
+  <div class="instagram-grid">
+    <img src="assets/insta1.jpg">
+    <img src="assets/insta2.jpg">
+    <img src="assets/insta3.jpg">
+  </div>
+</section>
+
 <!-- CARRINHO -->
-<section class="cart fade-up" id="cart">
-  <h2>Carrinho</h2>
+<section id="cart" class="section cart">
+  <h3>Carrinho</h3>
   <ul id="cart-items"></ul>
-  <p>Total: <strong id="cart-total">0€</strong></p>
-  <a class="checkout" href="https://www.instagram.com/criztal.resinart/" target="_blank">
-    Finalizar encomenda via Instagram
-  </a>
+  <p class="total">Total: <span id="cart-total">0€</span></p>
 </section>
 
-<!-- CONTACTO -->
-<section class="contact fade-up" id="contacto">
-  <h2>Contacto</h2>
-  <p>Encomendas personalizadas via Instagram</p>
-  <a href="https://www.instagram.com/criztal.resinart/" target="_blank">
-    @criztal.resinart
-  </a>
-</section>
-
-<footer>
-  <p>© 2026 Criztal Resin Art — Todos os direitos reservados</p>
+<footer class="footer">
+  <p>© 2026 Criztal Resin Art</p>
 </footer>
 
 <script src="script.js"></script>
