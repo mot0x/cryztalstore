@@ -4,29 +4,30 @@
   <meta charset="UTF-8">
   <title>Criztal Resin Art</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header class="top">
+<header class="header">
   <h1>Criztal Resin Art</h1>
   <nav>
-    <a href="#about">Sobre</a>
-    <a href="#shop">Loja</a>
-    <a href="#contact">Contacto</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#loja">Loja</a>
+    <a href="#cart">Carrinho</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero-image"></section>
 
-<section class="hero-content">
+<section class="hero-content fade-up">
   <h2>Arte em Resina</h2>
   <p>Peças únicas criadas à mão com detalhe, paixão e inspiração natural.</p>
 </section>
 
-
-<section id="about" class="section">
+<!-- SOBRE -->
+<section class="about fade-up" id="sobre">
   <h2>Sobre a Artista</h2>
   <p>
     Cada criação nasce da inspiração natural, do detalhe e do processo artesanal.
@@ -34,41 +35,57 @@
   </p>
 </section>
 
-<section id="shop" class="section">
+<!-- LOJA -->
+<section class="shop fade-up" id="loja">
   <h2>Loja</h2>
 
-  <div class="grid">
-    <div class="card">
+  <div class="products">
+    <div class="product">
       <img src="assets/p1.svg" alt="Porta-copos Oceano">
       <h3>Porta-copos Oceano</h3>
-      <span>25€</span>
+      <p class="price">25€</p>
+      <button onclick="addToCart('Porta-copos Oceano', 25)">Adicionar</button>
     </div>
 
-    <div class="card">
+    <div class="product">
       <img src="assets/p2.svg" alt="Tabuleiro Áurea">
       <h3>Tabuleiro Áurea</h3>
-      <span>45€</span>
+      <p class="price">45€</p>
+      <button onclick="addToCart('Tabuleiro Áurea', 45)">Adicionar</button>
     </div>
 
-    <div class="card">
+    <div class="product">
       <img src="assets/p3.svg" alt="Chaveiro Cristal">
       <h3>Chaveiro Cristal</h3>
-      <span>12€</span>
+      <p class="price">12€</p>
+      <button onclick="addToCart('Chaveiro Cristal', 12)">Adicionar</button>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section contact">
+<!-- CARRINHO -->
+<section class="cart fade-up" id="cart">
+  <h2>Carrinho</h2>
+  <ul id="cart-items"></ul>
+  <p>Total: <strong id="cart-total">0€</strong></p>
+  <a class="checkout" href="https://www.instagram.com/criztal.resinart/" target="_blank">
+    Finalizar encomenda via Instagram
+  </a>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact fade-up" id="contacto">
   <h2>Contacto</h2>
   <p>Encomendas personalizadas via Instagram</p>
-  <a class="btn" href="https://www.instagram.com/criztal.resinart/" target="_blank">
-    Instagram
+  <a href="https://www.instagram.com/criztal.resinart/" target="_blank">
+    @criztal.resinart
   </a>
 </section>
 
 <footer>
-  © 2026 Criztal Resin Art
+  <p>© 2026 Criztal Resin Art — Todos os direitos reservados</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
